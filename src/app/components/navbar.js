@@ -1,6 +1,11 @@
+'use client';
+import { useRouter } from 'next/navigation';
 import styles from "../page.module.css";
 
+
 export default function Navbar(){
+    const router = useRouter();
+    
     return (
         <div className={styles.navbar}>
             <div className={styles.brand}>
@@ -8,16 +13,16 @@ export default function Navbar(){
             </div>
             <div className={styles.opciones}>
                 <div className={styles.opcion}>
-                    <p>Home</p>
+                    <p onClick={() => router.push("/")}>Home</p>
                 </div>
                 <div className={styles.opcion}>
-                    <p>Profile</p>
+                    <p onClick={() => router.push("/pages/newStudent")}>New Student</p>
+                </div>          
+                <div className={styles.opcion}>
+                    <p onClick={() => router.push("/pages/updateStudent")}>Update Student</p>
                 </div>
                 <div className={styles.opcion}>
-                    <p>Settings</p>
-                </div>
-                <div className={styles.opcion}>
-                    <p>Logout</p>
+                    <p onClick={() => router.push("/pages/deleteStudent")}>Delete Student</p>
                 </div>
             </div>
         </div>
