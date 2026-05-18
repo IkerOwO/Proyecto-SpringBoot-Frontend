@@ -19,10 +19,7 @@ export default function Navbar(){
                     <p onClick={() => router.push("/pages/newStudent")}>New Student</p>
                 </div>          
                 <div className={styles.opcion}>
-                    <p onClick={() => router.push("/pages/updateStudent")}>Update Student</p>
-                </div>
-                <div className={styles.opcion}>
-                    <p onClick={() => router.push("/pages/deleteStudent")}>Delete Student</p>
+                    <p onClick={() => router.push("/pages/seeStudent")}>See Students</p>
                 </div>
             </div>
         </div>
