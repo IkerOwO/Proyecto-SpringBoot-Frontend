@@ -1,9 +1,11 @@
-import styles from "../page.module.css"
+import styles from "../page.module.css";
 
-export default function Footer(){
+export default function Footer() {
     return (
         <div className={styles.footer}>
-            <p>Project made with ❤️ by Iker</p>
+            <p>
+                Panel de Administración 🎓 Hecho con <span>❤️</span> por Iker &copy; {new Date().getFullYear()}
+            </p>
         </div>
-    )
+    );
 }
